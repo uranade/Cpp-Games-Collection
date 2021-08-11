@@ -18,10 +18,10 @@ void DrawMan(int tries){
                 cout<<"  O  ";cout<<endl;
         cout<<"  |";
             if(tries>=3)
-                cout<<" /|\  ";cout<<endl;
+                cout<<" /|\\  ";cout<<endl;
         cout<<"  |";
             if(tries>=1)
-                cout<<"  /\  ";cout<<endl;
+                cout<<"  /\\  ";cout<<endl;
         cout<<"  |";
         cout<<"_|_";
 }
@@ -34,13 +34,13 @@ int main(){
     word = wordList[rand()%5];
     
     int wordLength = word.length();
-    string dispWord(wordLength, "_");
+    string dispWord ( wordLength , '_');
     int found = 0 ;
-    char guess = "";
+    char guess = ' ';
     int tries = 5;
-    int flagFound = 0;
+    int flagFound = 0; 
     
-    while(tries>=0){                                              
+    while(tries>=0){                                               
         system("cls");
         cout<<"Guess Programming Lang :  "<<endl<<endl;
         
@@ -72,7 +72,7 @@ int main(){
         
         flagFound=0;
         for(int i=0; i<wordLength; i++){
-            if(word[i]==guess && dispWord[i]=="_"){
+            if(word[i]==guess && dispWord[i]=='_'){
                 dispWord[i]=guess;
                 found++;
                 flagFound=1;
